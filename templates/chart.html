@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Chart</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="static/img/Huckster-Logos-2.png" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="/static/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="/static/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="/static/css/bootstrap.min2.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="/static/css/style3.css" rel="stylesheet">
+</head>
+
+<body >
+    <div class="container-xxl position-relative bg-white d-flex p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Sidebar Start -->
+        <div class="sidebar pe-4 pb-3">
+            <nav class="navbar bg-light navbar-light">
+                <a href="index_admin.html" class="navbar-brand mx-4 mb-3">
+                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>DASHMIN</h3>
+                </a>
+                <div class="d-flex align-items-center ms-4 mb-4">
+                    <div class="position-relative">
+                        <img class="rounded-circle" src="/static/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
+                    </div>
+                    <div class="ms-3">
+                        <h6 class="mb-0">Admin 1</h6>
+                        <span>Admin</span>
+                    </div>
+                </div>
+                <div class="navbar-nav w-100">
+                    <a href="/index_admin" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Elements</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="button.html" class="dropdown-item">Buttons</a>
+                            <a href="typography.html" class="dropdown-item">Typography</a>
+                            <a href="element.html" class="dropdown-item">Other Elements</a>
+                        </div>
+                    </div>
+                    <a href="widget.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Widgets</a>
+                    <a href="form.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Forms</a>
+                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
+                    <a href="chart.html" class="nav-item nav-link active"><i class="fa fa-chart-bar me-2"></i>Charts</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="signin.html" class="dropdown-item">Sign In</a>
+                            <a href="signup.html" class="dropdown-item">Sign Up</a>
+                            <a href="404.html" class="dropdown-item">404 Error</a>
+                            <a href="blank.html" class="dropdown-item">Blank Page</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Sidebar End -->
+
+
+        <!-- Content Start -->
+        <div class="content">
+            <!-- Navbar Start -->
+            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
+                <a href="index_admin.html" class="navbar-brand d-flex d-lg-none me-4">
+                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                </a>
+                <a href="#" class="sidebar-toggler flex-shrink-0">
+                    <i class="fa fa-bars"></i>
+                </a>
+                <form class="d-none d-md-flex ms-4">
+                    <input class="form-control border-0" type="search" placeholder="Search">
+                </form>
+                <div class="navbar-nav align-items-center ms-auto">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-envelope me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Message</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="/static/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="/static/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <div class="d-flex align-items-center">
+                                    <img class="rounded-circle" src="/static/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                                    <div class="ms-2">
+                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
+                                        <small>15 minutes ago</small>
+                                    </div>
+                                </div>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all message</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <i class="fa fa-bell me-lg-2"></i>
+                            <span class="d-none d-lg-inline-flex">Notification</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Profile updated</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">New user added</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item">
+                                <h6 class="fw-normal mb-0">Password changed</h6>
+                                <small>15 minutes ago</small>
+                            </a>
+                            <hr class="dropdown-divider">
+                            <a href="#" class="dropdown-item text-center">See all notifications</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                            <img class="rounded-circle me-lg-2" src="/static/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                            <span class="d-none d-lg-inline-flex">Admin 1</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
+                            <a href="#" class="dropdown-item">My Profile</a>
+                            <a href="#" class="dropdown-item">Settings</a>
+                            <a href="/" class="dropdown-item">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navbar End -->
+
+
+            <!-- Chart Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="row g-4">
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Age Group</h6>
+                            <div id="age_group_chart" style="height: 1400%"></div>
+                        </div>
+                        <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+                        <script type="text/javascript">
+                        // setup
+                        // config
+                        //render init
+                                var dom = document.getElementById('age_group_chart');
+                                var myChart = echarts.init(dom, null, {
+                                renderer: 'canvas',
+                                useDirtyRect: false
+                                });
+                                var app = {};
+                                
+                                var option;
+
+                                option = {
+                            title: {
+                                text: 'Age Group',
+                                left: 'center'
+                            },
+                            tooltip: {
+                                trigger: 'item'
+                            },
+                            legend: {
+                                orient: 'vertical',
+                                left: 'left'
+                            },
+                            series: [
+                                {
+                                name: 'Access From',
+                                type: 'pie',
+                                radius: '50%',
+                                data: [
+                                    { value: 3, name: '17-20' },
+                                    { value: 26, name: '21-24' },
+                                    { value: 1, name: '25-29' }
+                                ],
+                                emphasis: {
+                                    itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                    }
+                                }
+                                }
+                            ]
+                            };
+
+                                if (option && typeof option === 'object') {
+                                myChart.setOption(option);
+                                }
+
+                                window.addEventListener('resize', myChart.resize);
+                        </script>
+                    </div>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Gender</h6>
+                            <div id="gender_chart" style="height: 92%"></div>
+                        </div>
+                    </div>
+                        <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+                        <script type="text/javascript">
+                                var dom = document.getElementById('gender_chart');
+                                var myChart = echarts.init(dom, null, {
+                                renderer: 'canvas',
+                                useDirtyRect: false
+                                });
+                                var app = {};
+                                
+                                var option;
+
+                                option = {
+                            title: {
+                                text: 'Gender',
+                                left: 'center'
+                            },
+                            tooltip: {
+                                trigger: 'item'
+                            },
+                            legend: {
+                                orient: 'vertical',
+                                left: 'left'
+                            },
+                            series: [
+                                {
+                                name: 'Access From',
+                                type: 'pie',
+                                radius: '50%',
+                                data: [
+                                    { value: 14, name: 'Female' },
+                                    { value: 16, name: 'Male' }
+                                ],
+                                emphasis: {
+                                    itemStyle: {
+                                    shadowBlur: 10,
+                                    shadowOffsetX: 0,
+                                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                    }
+                                }
+                                }
+                            ]
+                            };
+
+                                if (option && typeof option === 'object') {
+                                myChart.setOption(option);
+                                }
+
+                                window.addEventListener('resize', myChart.resize);
+                        </script>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">College</h6>
+                            <div id="college_chart" style="height: 1400%"></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+                    <script type="text/javascript">
+                            var dom = document.getElementById('college_chart');
+                            var myChart = echarts.init(dom, null, {
+                            renderer: 'canvas',
+                            useDirtyRect: false
+                            });
+                            var app = {};
+                            
+                            var option;
+
+                            option = {
+                        tooltip: {
+                            trigger: 'item'
+                        },
+                        legend: {
+                            top: '5%',
+                            left: 'center'
+                        },
+                        series: [
+                            {
+                            name: 'Access From',
+                            type: 'pie',
+                            radius: ['40%', '70%'],
+                            avoidLabelOverlap: false,
+                            itemStyle: {
+                                borderRadius: 10,
+                                borderColor: '#fff',
+                                borderWidth: 2
+                            },
+                            label: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                label: {
+                                show: true,
+                                fontSize: 40,
+                                fontWeight: 'bold'
+                                }
+                            },
+                            labelLine: {
+                                show: false
+                            },
+                            data: [
+                                { value: 11, name: 'College of Business' },
+                                { value: 10, name: 'College of Arts And Science' },
+                                { value: 9, name: 'College of Law, Goverment & International Studies' }
+                            ]
+                            }
+                        ]
+                        };
+
+                            if (option && typeof option === 'object') {
+                            myChart.setOption(option);
+                            }
+
+                            window.addEventListener('resize', myChart.resize);
+                        </script>
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Recent Karaoke Reservation Methods</h6>
+                            <div id="method_chart" style="height: 92%"></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+                    <script type="text/javascript">
+                            var dom = document.getElementById('method_chart');
+                            var myChart = echarts.init(dom, null, {
+                            renderer: 'canvas',
+                            useDirtyRect: false
+                            });
+                            var app = {};
+                            
+                            var option;
+
+                            option = {
+                        tooltip: {
+                            trigger: 'item'
+                        },
+                        legend: {
+                            top: '5%',
+                            left: 'center'
+                        },
+                        series: [
+                            {
+                            name: 'Access From',
+                            type: 'pie',
+                            radius: ['40%', '70%'],
+                            avoidLabelOverlap: false,
+                            itemStyle: {
+                                borderRadius: 10,
+                                borderColor: '#fff',
+                                borderWidth: 2
+                            },
+                            label: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                label: {
+                                show: true,
+                                fontSize: 40,
+                                fontWeight: 'bold'
+                                }
+                            },
+                            labelLine: {
+                                show: false
+                            },
+                            data: [
+                                { value: 13, name: 'By using phone' },
+                                { value: 0, name: 'By email' },
+                                { value: 17, name: 'In person' }
+                            ]
+                            }
+                        ]
+                        };
+
+                            if (option && typeof option === 'object') {
+                            myChart.setOption(option);
+                            }
+
+                            window.addEventListener('resize', myChart.resize);
+                        </script>
+
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Efficency of Handled Reservation Rating Count</h6>
+                            <div id="efficency-chart" style="height: 1400%"></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+                    <script type="text/javascript">
+                        var dom = document.getElementById('efficency-chart');
+                            var myChart = echarts.init(dom, null, {
+                            renderer: 'canvas',
+                            useDirtyRect: false
+                            });
+                            var app = {};
+                            
+                            var option;
+
+                            option = {
+                        xAxis: {
+                            type: 'category',
+                            data: ['1', '2', '3', '4', '5']
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [
+                            {
+                            data: [4,{
+                                    value: 12,
+                                    itemStyle: {
+                                        color: '#a90000'
+                                    }
+                                    },4, 5, 5],
+                            emphasis: {
+                                itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            },
+                            type: 'bar'
+                            }
+                        ]
+                        };
+
+                            if (option && typeof option === 'object') {
+                            myChart.setOption(option);
+                            }
+
+                            window.addEventListener('resize', myChart.resize);
+                        </script>
+
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Employees Responding Rating Count</h6>
+                            <div id="employee-chart" style="height: 92%"></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+                    <script type="text/javascript">
+                        var dom = document.getElementById('employee-chart');
+                            var myChart = echarts.init(dom, null, {
+                            renderer: 'canvas',
+                            useDirtyRect: false
+                            });
+                            var app = {};
+                            
+                            var option;
+
+                            option = {
+                        xAxis: {
+                            type: 'category',
+                            data: ['1', '2', '3', '4', '5']
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [
+                            {
+                            data: [4,{
+                                value: 10,
+                                itemStyle: {
+                                    color: '#a90000'
+                                }
+                                }, 2, 5, 6],
+                            emphasis: {
+                                itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            },
+                            type: 'bar'
+                            }
+                        ]
+                        };
+
+                            if (option && typeof option === 'object') {
+                            myChart.setOption(option);
+                            }
+
+                            window.addEventListener('resize', myChart.resize);
+                        </script>
+
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Effectiveness of Karaoke's Online Reservation System in Task Handling</h6>
+                            <div id="effectiveness-chart" style="height: 1400%"></div>
+                        </div>
+                    </div>
+                    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+                    <script type="text/javascript">
+                        var dom = document.getElementById('effectiveness-chart');
+                            var myChart = echarts.init(dom, null, {
+                            renderer: 'canvas',
+                            useDirtyRect: false
+                            });
+                            var app = {};
+                            
+                            var option;
+
+                            option = {
+                        xAxis: {
+                            type: 'category',
+                            data: ['1', '2', '3', '4', '5']
+                        },
+                        yAxis: {
+                            type: 'value'
+                        },
+                        series: [
+                            {
+                            data: [0, 0,{
+                                value: 1,
+                                itemStyle: {
+                                    color: '#a90000'
+                                }
+                                }, {
+                                value: 8,
+                                itemStyle: {
+                                    color: '#FFFF00'
+                                }
+                                },{
+                                value: 21,
+                                itemStyle: {
+                                    color: '#008000'
+                                }
+                                }
+                                ],
+                            emphasis: {
+                                itemStyle: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                }
+                            },
+                            type: 'bar'
+                            }
+                        ]
+                        };
+
+                            if (option && typeof option === 'object') {
+                            myChart.setOption(option);
+                            }
+
+                            window.addEventListener('resize', myChart.resize);
+                        </script>
+
+                    <div class="col-sm-12 col-xl-6">
+                        <div class="bg-light rounded h-100 p-4">
+                            <h6 class="mb-4">Login Features Desired in the New Karaoke Booking System</h6>
+                            <div id="login-chart" style="height: 92%"></div>
+                    </div>
+                    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+                    <script type="text/javascript">
+                            var dom = document.getElementById('login-chart');
+                            var myChart = echarts.init(dom, null, {
+                            renderer: 'canvas',
+                            useDirtyRect: false
+                            });
+                            var app = {};
+                            
+                            var option;
+
+                            option = {
+                        title: {
+                            text: 'Preference of Customers'
+                        },
+                        tooltip: {
+                            trigger: 'axis',
+                            axisPointer: {
+                            type: 'shadow'
+                            }
+                        },
+                        legend: {},
+                        grid: {
+                            left: '3%',
+                            right: '4%',
+                            bottom: '3%',
+                            containLabel: true
+                        },
+                        xAxis: {
+                            type: 'value',
+                            boundaryGap: [0, 0.01]
+                        },
+                        yAxis: {
+                            type: 'category',
+                            data: ['With Login Features', 'Without Login Features', ]
+                        },
+                        series: [
+                            {
+                            type: 'bar',
+                            data: [28, 2]
+                            }
+                        ]
+                        };
+
+                            if (option && typeof option === 'object') {
+                            myChart.setOption(option);
+                            }
+
+                            window.addEventListener('resize', myChart.resize);
+                        </script>
+
+            <!-- <div class="col-sm-12 col-xl-6">
+                <div class="bg-light rounded h-100 p-4">
+                    <h6 class="mb-4">Login Features Desired in the New Karaoke Booking System</h6>
+                    <div id="login-chart" style="height: 92%"></div>
+            </div>
+            <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+            <script type="text/javascript">
+                    var dom = document.getElementById('login-chart');
+                    var myChart = echarts.init(dom, null, {
+                    renderer: 'canvas',
+                    useDirtyRect: false
+                    });
+                    var app = {};
+                    
+                    var option;
+
+                    option = {
+                title: {
+                    text: 'Preference of Customers'
+                },
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {
+                    type: 'shadow'
+                    }
+                },
+                legend: {},
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: {
+                    type: 'value',
+                    boundaryGap: [0, 0.01]
+                },
+                yAxis: {
+                    type: 'category',
+                    data: ['With Login Features', 'Without Login Features', ]
+                },
+                series: [
+                    {
+                    type: 'bar',
+                    data: [28, 2]
+                    }
+                ]
+                };
+
+                    if (option && typeof option === 'object') {
+                    myChart.setOption(option);
+                    }
+
+                    window.addEventListener('resize', myChart.resize);
+                </script>
+
+
+                            <div class="col-sm-12 col-xl-6">
+                                <div class="bg-light rounded h-100 p-4">
+                                    <h6 class="mb-4">Preference for Accessing the Karaoke Booking System</h6>
+                                    <div id="prefer-chart" style="height: 1400%"></div>
+                                </div>
+                            </div>
+                            <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+                            <script type="text/javascript">
+                                    var dom = document.getElementById('prefer-chart');
+                                    var myChart = echarts.init(dom, null, {
+                                    renderer: 'canvas',
+                                    useDirtyRect: false
+                                    });
+                                    var app = {};
+                                    
+                                    var option;
+
+                                    option = {
+                                title: {
+                                    text: 'Preference of Customers'
+                                },
+                                tooltip: {
+                                    trigger: 'axis',
+                                    axisPointer: {
+                                    type: 'shadow'
+                                    }
+                                },
+                                legend: {},
+                                grid: {
+                                    left: '3%',
+                                    right: '4%',
+                                    bottom: '3%',
+                                    containLabel: true
+                                },
+                                xAxis: {
+                                    type: 'value',
+                                    boundaryGap: [0, 0.01]
+                                },
+                                yAxis: {
+                                    type: 'category',
+                                    data: ['Opening and Closing Time', 'Chat, Opening and Closing Time, Extend Time Request', 
+                                    'Cancellation Notification, Opening and Closing Time, Extend Time Request', 'Chat, Opening and Closing Time, Save as Favorite',
+                                    'Cancellation Notification, Chat, Extend Time Request', 'Chat, Save as Favorite, Extend Time Request', 
+                                    'Cancellation Notification, Save as Favorite, Extend Time Request', 'Cancellation Notification, Chat, Opening and Closing Time',
+                                    'Cancellation Notification, Opening and Closing Time, Save as Favorite', 'Opening and Closing Time, Save as Favorite, Extend Time Request']
+                                },
+                                series: [
+                                    {
+                                    type: 'bar',
+                                    data: [1, 4, 10, 2, 2, 2, 3, 3, 2, 1]
+                                    }
+                                ]
+                                };
+
+                                    if (option && typeof option === 'object') {
+                                    myChart.setOption(option);
+                                    }
+
+                                    window.addEventListener('resize', myChart.resize);
+                                </script> -->
+
+
+                    </div> 
+                </div>
+            </div>
+            <!-- Chart End -->
+
+
+            <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
+                        </div>
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+        </div>
+        <!-- Content End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.2.1/dist/echarts.min.js"></script>  
+    <script src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+    <script src="/static/lib/chart/chart.min.js"></script>
+    <script src="/static/lib/easing/easing.min.js"></script>
+    <script src="/static/lib/waypoints/waypoints.min.js"></script>
+    <script src="/static/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="/static/lib/tempusdominus/js/moment.min.js"></script>
+    <script src="/static/lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="/static/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="/static/js/main2.js"></script>
+
+    <!-- <script>
+        // Replace the line chart
+        const lineChartContainer = document.getElementById("line-chart-container");
+        const lineChartImage = new Image();
+        lineChartImage.src = "{{ url_for('static', filename='img/(1)output.png') }}";
+        lineChartContainer.appendChild(lineChartImage);
+
+        const salesRevenueContainer = document.getElementById("sales-revenue-container");
+        const salesRevenueImage = new Image();
+        salesRevenueImage.src = "{{ url_for('static', filename='img/rating1.png') }}";
+        salesRevenueContainer.appendChild(salesRevenueImage);
+
+        const barChartContainer = document.getElementById("bar-chart-container");
+        const barChartImage = new Image();
+        barChartImage.src = "{{ url_for('static', filename='img/efficency.png') }}";
+        barChartContainer.appendChild(barChartImage);
+
+        const worldwideSalesContainer = document.getElementById("worldwide-sales-container");
+        const worldwideSalesImage = new Image();
+        worldwideSalesImage.src = "{{ url_for('static', filename='img/effectiveness.png') }}";
+        worldwideSalesContainer.appendChild(worldwideSalesImage);
+
+        // const pieChartContainer = document.getElementById("pie-chart-container");
+        // const pieChartImage = new Image();
+        // pieChartImage.src = "{{ url_for('static', filename='img/prefer.png') }}";
+        // pieChartContainer.appendChild(pieChartImage);
+
+        const doughtnutChartContainer = document.getElementById("doughnut-chart-container");
+        const doughtnutChartImage = new Image();
+        doughtnutChartImage.src = "{{ url_for('static', filename='img/features.png') }}";
+        doughtnutChartContainer.appendChild(doughtnutChartImage);
+    </script> -->
+</body>
+
+</html>
